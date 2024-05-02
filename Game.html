@@ -7,6 +7,10 @@
     <title>Card Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="  h-screen bg-no-repeat bg-cover bg-center"
@@ -30,95 +34,200 @@
 
     <section>
 
-        <div class=" flex items-center  backdrop-blur-md  justify-center h-[600px] rounded-xl  w-3/4 mt-10 m-auto  ">
+
+        <div class=" flex items-center  backdrop-blur-md  justify-around  h-[600px] rounded-xl  w-3/4 mt-10 m-auto  ">
+            <div
+                class="dashBoard bg-[#ffffff75] h-[300px] w-[300px] rounded-lg backdrop:blur-lg flex justify-center flex-col  p-4 ">
+                <div class="bg-white w-2/3 h-12 rounded-md my-3 flex items-center justify-center ">
+                    <h1 class="text-2xl font-bold font-mono ">Scoreboard</h1>
+                </div>
+                <div>
+                    <div  class=" flex items-center h-10 p-2 w-40 bg-white my-3 rounded-md">
+                        <h1 id="moves">Moves:0</h1>
+                    </div>
+                    <div  class="flex items-center p-2 h-10 w-40 my-3 bg-white rounded-md">
+                        <h1 id="misses">Misses:0</h1>
+                    </div>   <div  class="flex items-center p-2 h-10 w-40 my-3 bg-white rounded-md">
+                        <h1 id="matched">Misses:0</h1>
+                    </div>
+                </div>
+
+            </div>
             <div id="gridContainer" class=" grid grid-rows-3 grid-cols-4 gap-x-4 gap-y-5">
-                <div class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white ">
-                        <h1>This is front</h1>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
                     </div>
                     <div class="lastChild hidden">
 
                     </div>
 
                 </div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
                     </div>
                     <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
-                <div class="gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] shadow-lg rounded-2xl backdrop-blur-lg">
-                    <div class="firstChild flex item-Center justify-center text-white">
-                        <h1>This is front</h1>
-                    </div>
-                    <div class="lastChild hidden">
-                        
-                    </div></div>
 
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+                <div
+                    class=" gridItems p-5 h-40 w-40 bg-[rgba(255,255,255,0.21)] flex justify-center items-center shadow-lg rounded-2xl backdrop-blur-lg ">
+                    <div class="firstChild flex item-Center justify-center flex-col   text-white ">
+                        <div class="w-full  flex items-center justify-center mb-5">
+                            <img src="./resources/backgroundimages/icons8-eye.gif"
+                                class="w-9 invert transition ease-out " alt="">
+                        </div>
+                        <h1>See Cards.</h1>
+                    </div>
+                    <div class="lastChild hidden">
+
+                    </div>
+
+                </div>
+             
+
+            </div>
+            <div id="retryGame" class="hidden border bg-white h-40 w-96 rounded-md flex items-center justify-center flex-col" >
+                <h1 class="text-2xl mb-5">Match has ended.</h1>
+                <button id="retryGameBtn" class="bg-blue-500 text-white p-2 rounded-md hover:bg-green-400 transition-all">Do you want Retry?</button>
             </div>
 
         </div>

@@ -5,7 +5,10 @@ module.exports = {
     extend: {
    backgroundImage:{
     'hero-pattern': "url('./resources/background images/osman-rana-yM3T1vYh8Oc-unsplash.jpg')"
-   }
+
+   },
+
+
     },
   },
   plugins: [],
