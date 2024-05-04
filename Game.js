@@ -61,44 +61,40 @@ let displayCards = () => {
 
 
 
-        element.addEventListener('click', () => {
-            Array.from(gridItems).forEach((e) => {
+        element.addEventListener('click', () => { //Click Event listener in each  card div element.
+            Array.from(gridItems).forEach((e) => { // Return looping to remove pointer events in card div element for player can click the elelment.
            
                 e.classList.remove('pointer-events-none')
-                e.classList.remove('cursor-not-allowed')
             })
-            element.classList.add('pointer-events-none')
-            element.classList.add('cursor-not-allowed')
+            element.classList.add('pointer-events-none') //Added pointer events none in clicked element for player can't click on clicked element.
            
-            clickCount++;
-            let imgElement = element.lastElementChild.firstElementChild;
-            let id = Number.parseInt(imgElement.id);
-            let firstElement = element.firstElementChild
-            let lastElement = element.lastElementChild
-            firstElement.classList.add('hidden')
-            lastElement.classList.remove('hidden')
+            clickCount++; // Increasing click count 
+            let imgElement = element.lastElementChild.firstElementChild; // Taking image element from card div.
+            let id = Number.parseInt(imgElement.id); //Storing id of image element which is selected.
+            let firstElement = element.firstElementChild //Storing the first child element of card div.
+            let lastElement = element.lastElementChild //Storing the last element child of card div.
+            firstElement.classList.add('hidden') //Adding hidden class for flip the card and show the images element for pairing.
+            lastElement.classList.remove('hidden') //Removing hidden class from image element.
 
-            if (matchPair1 === 0 && clickCount === 1) {
-                imgElementArr.push(imgElement)
-                matchPair1 = id;
+            if (matchPair1 === 0 && clickCount === 1) { //Condition for first click.
+                imgElementArr.push(imgElement) //Pushing first clikc image element in new imageElement Array.
+                matchPair1 = id; //Storing first image id for match the pair.
 
-            } else if (matchPair2 === 0 && clickCount === 2) {
-                imgElementArr.push(imgElement)
-                matchPair2 = id
-                if (matchPair1 === matchPair2) {
-                    console.log('player win')
-                    setTimeout(() => {
-                        for (let i = 0; i < imgElementArr.length; i++) {
-                            imgElementArr[i].parentNode.parentNode.classList.add('invisible')
+            } else if (matchPair2 === 0 && clickCount === 2) { //Condition for Second click.
+                imgElementArr.push(imgElement) //Pushing Second click image element in new imageElement Array.
+                matchPair2 = id //Storing second image id for math the pair.
+                if (matchPair1 === matchPair2) {  // Condition for check if card is pair or not.
+                    setTimeout(() => {      //Settime our for hide the paired card.
+                        for (let i = 0; i < imgElementArr.length; i++) {  //Loop for hide the paired card.
+                            imgElementArr[i].parentNode.parentNode.classList.add('invisible') 
                         }
-                        matched++;
-                        matchedElem.innerText = `Matched:${matched}`
-                        imgElementArr = []
-                        matchPair1 = 0;
-                        matchPair2 = 0; 
-                        clickCount = 0
-                        retryGameFunc()
-                        console.log(matched,"This is mathced score")
+                        matched++; //Mathced score increase.
+                        matchedElem.innerText = `Matched:${matched}` //Displaying the matched score.
+                        imgElementArr = [] //reset imgElement Arr;
+                        matchPair1 = 0; //Reset id 1
+                        matchPair2 = 0; //Reset id 2
+                        clickCount = 0  //Reset click count
+                        retryGameFunc() //Retry game func called.
                     }, 500);
              
                 } else {
